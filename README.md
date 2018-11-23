@@ -29,3 +29,10 @@ int[] sortingMedianValues(int desiredCount, int[] originalArr)
 ```
 
 > To responsive to user desired numbers and array numbers, It should be like above.
+> I Need Walker
+> I Need Step
+> There are Two cases
+>
+> ( Array.Length / DesiredCount >= 2 )
+> And Else
+>
