@@ -57,4 +57,19 @@ if(originalArr.Length/desiredCount >= 2 )
 > All we need to do is making logic and exceptions such as Skip and Holding ( Because we have to add last one )
 >
 >
-
+![Hurdle5](https://postfiles.pstatic.net/MjAxODExMjNfMjg5/MDAxNTQyOTY1MzkwNjA3.y0am_wwVpPDdmflUipGsYI6FlMsqA8EfzMAaO8hTWjIg.WkeBGPPjsJGd6_8I3qpQ2BjgCj_nbk7HYd9ZYlL844Qg.PNG.cjsvndtjs1/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2018-11-23_%EC%98%A4%ED%9B%84_6.29.12.png?type=w966 "desc")
+>
+> Second case is bit difficult
+>
+> Because it need other logic to solve
+>
+![Hurdle6](https://postfiles.pstatic.net/MjAxODExMjNfNDMg/MDAxNTQyOTY1NDUzNzEz.oyPiQkblAg3JIeE-y-EmdkBKzTQjoUgHUtzm1KnJaMAg.-gCtIBSaN7rirZAhjYTbA2ODB5e86LDyrCQKB6vP17Ag.PNG.cjsvndtjs1/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2018-11-23_%EC%98%A4%ED%9B%84_6.29.21.png?type=w966 "desc")
+>
+```
+else if((originalArr.Length / (differenceBTWnumbers * 2)) == skipcheck)
+{
+  skip++;
+}
+```
+>
+>
