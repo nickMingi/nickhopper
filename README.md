@@ -20,4 +20,4 @@ Readme
 ## Hurdle Algorithm
 > Developing Algorithm
 
-![Test](/Users/nickhopper/Desktop/test.png)
+![Test](test.png)
