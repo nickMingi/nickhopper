@@ -49,3 +49,12 @@ if(originalArr.Length/desiredCount >= 2 )
 > I still need to think if there is better way, but
 >
 > This works fine of Speed O(N)
+
+![Hurdle4](https://postfiles.pstatic.net/MjAxODExMjNfMTM5/MDAxNTQyOTYzMTQwMDgw.fTzWEUjr_r4BHa7y3HbI0NSEH7V8pU1pnyfBES4hvdcg.NXuDlxJ_Ky0sy_JImzlRH_evlHLQDqRv4fLWVkRohjUg.PNG.cjsvndtjs1/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2018-11-23_%EC%98%A4%ED%9B%84_5.51.53.png?type=w966 "desc")
+>
+> First case is very easy
+> 
+> All we need to do is making logic and exceptions such as Skip and Holding ( Because we have to add last one )
+>
+>
+
