@@ -1,0 +1,347 @@
+--[[
+    Remaking Pokemonmaster
+    Writer: Mingi hong
+    marin333669@gmail.com
+
+    GD50
+    Pokemon
+
+    Author: Colton ogden
+    cogden@cs50.harvard.edu
+]]
+
+POKEMON_IDS = {
+    'Bulbasaur', 'Ivysaur', 'Venusaur', 'Charmander', 'Charmeleon',
+    'Charizard', 'Squirtle', 'Wartortle', 'Blastoise', 'Caterpie',
+    'Metapod','Butterfree','Weedle','Kakuna', 'Beedrill',
+    'Pidgey', 'Pidgeotto', 'Pidgeot', 'Rattata', 'Raticate',
+    'Spearow', 'Fearow', 'Ekans', 'Arbok', 'Pikachu',
+}
+
+POKEMON_DEFS = {
+    ['Bulbasaur'] = {
+        name = 'Bulbasaur',
+        battleSpriteFront = 'Bulbasaur-front',
+        battleSpriteBack = 'Bulbasaur-back',
+        baseHP = 14,
+        baseAttack = 9,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 3
+    },
+    ['Ivysaur'] = {
+        name = 'Ivysaur',
+        battleSpriteFront = 'Ivysaur-front',
+        battleSpriteBack = 'Ivysaur-back',
+        baseHP = 12,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Venusaur'] = {
+        name = 'Venusaur',
+        battleSpriteFront = 'Venusaur-front',
+        battleSpriteBack = 'Venusaur-back',
+        baseHP = 11,
+        baseAttack = 5,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 3,
+        speedIV = 4
+    },
+    ['Charmander'] = {
+        name = 'Charmander',
+        battleSpriteFront = 'Charmander-front',
+        battleSpriteBack = 'Charmander-back',
+        baseHP = 13,
+        baseAttack = 6,
+        baseDefense = 4,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 2,
+        speedIV = 5
+    },
+    ['Charmeleon'] = {
+        name = 'Charmeleon',
+        battleSpriteFront = 'Charmeleon-front',
+        battleSpriteBack = 'Charmeleon-back',
+        baseHP = 14,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Charizard'] = {
+        name = 'Charizard',
+        battleSpriteFront = 'Charizard-front',
+        battleSpriteBack = 'Charizard-back',
+        baseHP = 14,
+        baseAttack = 9,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 3
+    },
+    ['Squirtle'] = {
+        name = 'Squirtle',
+        battleSpriteFront = 'Squirtle-front',
+        battleSpriteBack = 'Squirtle-back',
+        baseHP = 12,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Wartortle'] = {
+        name = 'Wartortle',
+        battleSpriteFront = 'Wartortle-front',
+        battleSpriteBack = 'Wartortle-back',
+        baseHP = 11,
+        baseAttack = 5,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 3,
+        speedIV = 4
+    },
+    ['Blastoise'] = {
+        name = 'Blastoise',
+        battleSpriteFront = 'Blastoise-front',
+        battleSpriteBack = 'Blastoise-back',
+        baseHP = 13,
+        baseAttack = 6,
+        baseDefense = 4,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 2,
+        speedIV = 5
+    },
+    ['Caterpie'] = {
+        name = 'Caterpie',
+        battleSpriteFront = 'Caterpie-front',
+        battleSpriteBack = 'Caterpie-back',
+        baseHP = 14,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Metapod'] = {
+        name = 'Metapod',
+        battleSpriteFront = 'Metapod-front',
+        battleSpriteBack = 'Metapod-back',
+        baseHP = 14,
+        baseAttack = 9,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 3
+    },
+    ['Butterfree'] = {
+        name = 'Butterfree',
+        battleSpriteFront = 'Butterfree-front',
+        battleSpriteBack = 'Butterfree-back',
+        baseHP = 12,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Weedle'] = {
+        name = 'Weedle',
+        battleSpriteFront = 'Weedle-front',
+        battleSpriteBack = 'Weedle-back',
+        baseHP = 11,
+        baseAttack = 5,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 3,
+        speedIV = 4
+    },
+    ['Kakuna'] = {
+        name = 'Kakuna',
+        battleSpriteFront = 'Kakuna-front',
+        battleSpriteBack = 'Kakuna-back',
+        baseHP = 13,
+        baseAttack = 6,
+        baseDefense = 4,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 2,
+        speedIV = 5
+    },
+    ['Beedrill'] = {
+        name = 'Beedrill',
+        battleSpriteFront = 'Beedrill-front',
+        battleSpriteBack = 'Beedrill-back',
+        baseHP = 14,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Pidgey'] = {
+        name = 'Pidgey',
+        battleSpriteFront = 'Pidgey-front',
+        battleSpriteBack = 'Pidgey-back',
+        baseHP = 14,
+        baseAttack = 9,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 3
+    },
+    ['Pidgeotto'] = {
+        name = 'Pidgeotto',
+        battleSpriteFront = 'Pidgeotto-front',
+        battleSpriteBack = 'Pidgeotto-back',
+        baseHP = 12,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Pidgeot'] = {
+        name = 'Pidgeot',
+        battleSpriteFront = 'Pidgeot-front',
+        battleSpriteBack = 'Pidgeot-back',
+        baseHP = 11,
+        baseAttack = 5,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 3,
+        speedIV = 4
+    },
+    ['Rattata'] = {
+        name = 'Rattata',
+        battleSpriteFront = 'Rattata-front',
+        battleSpriteBack = 'Rattata-back',
+        baseHP = 13,
+        baseAttack = 6,
+        baseDefense = 4,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 2,
+        speedIV = 5
+    },
+    ['Raticate'] = {
+        name = 'Raticate',
+        battleSpriteFront = 'Raticate-front',
+        battleSpriteBack = 'Raticate-back',
+        baseHP = 14,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Spearow'] = {
+        name = 'Spearow',
+        battleSpriteFront = 'Spearow-front',
+        battleSpriteBack = 'Spearow-back',
+        baseHP = 14,
+        baseAttack = 9,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 3
+    },
+    ['Fearow'] = {
+        name = 'Fearow',
+        battleSpriteFront = 'Fearow-front',
+        battleSpriteBack = 'Fearow-back',
+        baseHP = 12,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    },
+    ['Ekans'] = {
+        name = 'Ekans',
+        battleSpriteFront = 'Ekans-front',
+        battleSpriteBack = 'Ekans-back',
+        baseHP = 11,
+        baseAttack = 5,
+        baseDefense = 5,
+        baseSpeed = 6,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 3,
+        speedIV = 4
+    },
+    ['Arbok'] = {
+        name = 'Arbok',
+        battleSpriteFront = 'Arbok-front',
+        battleSpriteBack = 'Arbok-back',
+        baseHP = 13,
+        baseAttack = 6,
+        baseDefense = 4,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 3,
+        defenseIV = 2,
+        speedIV = 5
+    },
+    ['Pikachu'] = {
+        name = 'Pikachu',
+        battleSpriteFront = 'Pikachu-front',
+        battleSpriteBack = 'Pikachu-back',
+        baseHP = 14,
+        baseAttack = 7,
+        baseDefense = 3,
+        baseSpeed = 7,
+        HPIV = 3,
+        attackIV = 4,
+        defenseIV = 2,
+        speedIV = 4
+    }
+}
