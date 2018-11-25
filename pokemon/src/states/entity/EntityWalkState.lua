@@ -1,12 +1,8 @@
 --[[
-    Remaking Pokemonmaster
-    Writer: Mingi hong
-    marin333669@gmail.com
-
     GD50
     Pokemon
 
-    Author: Colton Odgen
+    Author: Colton Ogden
     cogden@cs50.harvard.edu
 ]]
 
@@ -34,14 +30,14 @@ function EntityWalkState:attemptMove()
         toX = toX + 1
     elseif self.entity.direction == 'up' then
         toY = toY - 1
-    elseif
+    else
         toY = toY + 1
     end
 
     -- break out if we try to move out of the map boundaries
     if toX < 1 or toX > 24 or toY < 1 or toY > 13 then
         self.entity:changeState('idle')
-        self.entity:chagneAnimation('idle-' .. tostring(self.entity.direction))
+        self.entity:changeAnimation('idle-' .. tostring(self.entity.direction))
         return
     end
 
@@ -49,7 +45,7 @@ function EntityWalkState:attemptMove()
     self.entity.mapX = toX
 
     Timer.tween(0.5, {
-        [self.entity] = {x = (toX - 1) * TILE_SIZE, y = (toY-1) *  - self.entity.height / 2}
+        [self.entity] = {x = (toX - 1) * TILE_SIZE, y = (toY - 1) * TILE_SIZE - self.entity.height / 2}
     }):finish(function()
         if love.keyboard.isDown('left') then
             self.entity.direction = 'left'

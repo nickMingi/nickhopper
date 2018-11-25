@@ -1,3 +1,14 @@
+--[[
+    Remaking Pokemonmaster
+    Writer: Mingi hong
+    marin333669@gmail.com
+
+    GD50
+    Pokemon
+
+    Author: Colton ogden
+    cogden@cs50.harvard.edu
+]]
 DialogueState = Class{__includes = BaseState}
 
 function DialogueState:init(text, callback)

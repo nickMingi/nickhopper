@@ -343,5 +343,5 @@ POKEMON_DEFS = {
         attackIV = 4,
         defenseIV = 2,
         speedIV = 4
-    }
+    },
 }

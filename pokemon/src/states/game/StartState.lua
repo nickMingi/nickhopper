@@ -19,7 +19,7 @@ function StartState:init()
     self.spriteX = VIRTUAL_WIDTH / 2 - 18
     self.spriteY = VIRTUAL_HEIGHT / 2 - 24
 
-    self.tween = Timer.every(3, function()
+    self.tween = Timer.every(2, function()
         Timer.tween(0.2, {
             [self] = {spriteX = -36}
         })

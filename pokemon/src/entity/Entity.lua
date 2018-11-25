@@ -22,9 +22,10 @@ function Entity:init(def)
 
     self.width = def.width
     self.height = def.height
-    
+
     self.x = (self.mapX - 1) * TILE_SIZE
 
+    -- halfway raised on the tile just to simulate height/perspective
     self.y = (self.mapY - 1) * TILE_SIZE - self.height / 2
 end
 
@@ -40,7 +41,7 @@ function Entity:createAnimations(animations)
     local animationsReturned = {}
 
     for k, animationDef in pairs(animations) do
-        animationsRetured[k] = Animation{
+        animationsReturned[k] = Animation {
             texture = animationDef.texture or 'entities',
             frames = animationDef.frames,
             interval = animationDef.interval
@@ -48,6 +49,26 @@ function Entity:createAnimations(animations)
     end
 
     return animationsReturned
+end
+
+--[[
+    Called when we interact with this entity, as by pressing enter.
+]]
+function Entity:onInteract()
+
+end
+
+function Entity:processAI(params, dt)
+    self.stateMachine:processAI(params, dt)
+end
+
+function Entity:update(dt)
+    self.currentAnimation:update(dt)
+    self.stateMachine:update(dt)
+end
+
+function Entity:render()
+    self.stateMachine:render()
 end
 
 --[[

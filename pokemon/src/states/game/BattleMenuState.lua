@@ -1,4 +1,4 @@
-BattleMenuState = Class{__includes BaseState}
+BattleMenuState = Class{__includes = BaseState}
 
 function BattleMenuState:init(battleState)
     self.battleState = battleState
@@ -21,7 +21,7 @@ function BattleMenuState:init(battleState)
                 onSelect = function()
                     gSounds['run']:play()
                     gStateStack:pop()
-                    gStateStack:push(BattleMessageState('You runed'),
+                    gStateStack:push(BattleMessageState('You runed',
                     function() end), false)
                     Timer.after(0.5, function()
                         gStateStack:push(FadeInState({

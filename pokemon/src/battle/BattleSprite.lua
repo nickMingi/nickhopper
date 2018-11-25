@@ -24,7 +24,7 @@ function BattleSprite:update(dt)
 end
 
 function BattleSprite:render()
-    love.graphics.setColor(255, 255, 255, self.opacity)
+    love.graphics.setColor(1, 1, 1, self.opacity)
 
     love.graphics.setShader(self.whiteShader)
     self.whiteShader:send('WhiteFactor',self.blinking and 1 or 0)

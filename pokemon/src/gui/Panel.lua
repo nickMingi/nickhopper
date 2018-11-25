@@ -15,9 +15,9 @@ end
 
 function Panel:render()
     if self.visible then
-        love.graphics.setColor(255, 255, 255, 255)
+        love.graphics.setColor(0, 0, 0)
         love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
-        love.graphics.setColor(56, 56, 56, 255)
+        love.graphics.setColor(0, 0, 0)
         love.graphics.rectangle('fill', self.x+2, self.y+2, self.width-4, self.height-4)
         love.graphics.setColor(255, 255, 255, 255)
     end

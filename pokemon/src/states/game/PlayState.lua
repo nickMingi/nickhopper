@@ -28,7 +28,7 @@ function PlayState:update(dt)
         self.level.player.party.pokemon[1].currentHP = self.level.player.party.pokemon[1].HP
 
         -- show a dialogue for it, allowing us to do so again
-        gStateStack:push(dialogueState('Your pokemon has been healed!',
+        gStateStack:push(DialogueState('Your pokemon has been healed!',
 
         function()
             self.dialogueOpened = false
