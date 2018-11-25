@@ -13,7 +13,18 @@ function Player:init(def)
 
     self.party = Party {
         pokemon = {
+            Pokemon(POKEMON_DEFS['Pikachu'],6),
+            Pokemon(Pokemon.getRandomDef(), 5),
             Pokemon(Pokemon.getRandomDef(), 5)
+        },
+        pokemonFriend = {
+
         }
+    }
+    self.bag = Bag{
+        items = {
+            Item(ITEM_DEFS['Monsterball'])
+        },
+        money = 10000
     }
 end

@@ -22,6 +22,12 @@ function PlayState:init()
 end
 
 function PlayState:update(dt)
+    if  love.keyboard.wasPressed('b') then
+        gSounds['blip']:play()
+        -- show a menu for field
+        gStateStack:push(FieldMenuState(self.level.player))
+    end
+
     if not self.dialogueOpened and love.keyboard.wasPressed('p') then
         -- heal player pokemon
         gSounds['heal']:play()

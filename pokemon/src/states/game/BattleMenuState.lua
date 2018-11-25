@@ -4,9 +4,9 @@ function BattleMenuState:init(battleState)
     self.battleState = battleState
 
     self.battleMenu = Menu{
-        x = VIRTUAL_WIDTH - 64,
+        x = VIRTUAL_WIDTH - 128,
         y = VIRTUAL_HEIGHT - 64,
-        width = 64,
+        width = 128,
         height = 64,
         items = {
             {
@@ -14,6 +14,18 @@ function BattleMenuState:init(battleState)
                 onSelect = function()
                     gStateStack:pop()
                     gStateStack:push(TakeTurnState(self.battleState))
+                end
+            },
+            {
+                text = 'Bag',
+                onSelect = function()
+                    gStateStack:push(MenuState("Bag",self.battleState.player))
+                end
+            },
+            {
+                text = 'Change',
+                onSelect = function()
+                    gStateStack:push(MenuState("Pokemon",self.battleState.player))
                 end
             },
             {
