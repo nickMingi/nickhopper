@@ -14,13 +14,27 @@ POKEMON
 >2. Love
 >3. Tiled
 >
+##MACOS
 ```
 brew install lua
 brew cask install love
 brew cask install tiled
 ```
+##Windows
+```
+download LOVE
+Add Configuration Path
+```
 >Then what you need to do is typing 'love .'
 >
+##Packaging
+```
+What you need to do is making .zip file first
+Mac OS = zip -9 -r pokemon.love .
+Windows = compress whole file 
+          change ending with .love from .zip
+          copy /b love.exe+pokemon.love pokemon.exe
+```
 ![mingimon](https://postfiles.pstatic.net/MjAxODExMjVfMjQ3/MDAxNTQzMDgxNzU3Njk3.oOxaaJqlHwP3V67qlXtUBRz5FqG9Xq3VEsHxc-mrtYMg.0xiW7lkphXkFZwPvMCV11bTLxwZcEpCRpznd5XERS7gg.PNG.cjsvndtjs1/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2018-11-25_%EC%98%A4%EC%A0%84_2.42.33.png?type=w966 "desc")
 >
 >Let's get started!
