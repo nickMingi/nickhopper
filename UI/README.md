@@ -106,7 +106,52 @@ UI
 
 
 ### * Logics
+```
+basically the display is divided into three sections
+
+- Top
+- Middle
+- Bottom
+
+Mainpage will be displayed in the middle section
+Mainpage is managed as *LinkedList*
+```
 >
+> Importantly, Mainpage is tracable by tracking its index 
 >
+> Also You can follow the history
 >
+> It is designed with Linked-List
+>
+![MainPage](https://postfiles.pstatic.net/MjAxODEyMTNfMTY1/MDAxNTQ0NjkxMjcwMzI3.UM7wWd827AA-zkRtYIt5ACu9qmKonEt7qZZjErJs2h4g.6Wtg-XyegkhGU6oolcQ4FhGWFfWA1C85Ueay4ELhZSgg.PNG.cjsvndtjs1/MainpageHistoryManaging.png?type=w966 "desc")
+>
+> If page is selected, Add(page) into Linked-List
+>
+> And then Add(another page) when user click another page
+>
+> If user clicked same page, you don't need to Add(page)
+>
+> But, In case of (Count >= 2) you should trace current index
+>
+> For example ) Count = 5, current index = 4  
+>
+> And you clicked **Previous** Button
+>
+> Current index should be changed to 3
+> 
+>  
+>
+![TopMenu](https://postfiles.pstatic.net/MjAxODEyMTNfMjMg/MDAxNTQ0NjkxMjcwMzM2.V1UsFvRfeyhbj6B52OERcpwMjQkhMTsz4rzndOtt6AQg.m5wFrwyGt_H_sDlmBA9tlsd_t8EtjcR7IUFAoy2Mnwkg.PNG.cjsvndtjs1/TopMenuCustomizing.png?type=w966 "desc")
+>
+> Top menu is designed as Tree System
+>
+> Main Node will be **PageName**
+>
+> Degree 1 of Nodes will be displayed in Top Menu  
+>
+> Nodes that over or equal of degree 2 will be showed
+>
+> On action of Mouse hover
+>
+
 
