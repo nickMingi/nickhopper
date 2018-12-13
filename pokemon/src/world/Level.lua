@@ -8,9 +8,22 @@
 
 Level = Class{}
 
-function Level:init()
-    self.tileWidth = 50
-    self.tileHeight = 50
+function Level:init(param)
+    if param == 'database' then
+        self.tileWidth = gLevelDataNew['tileWidth']
+        self.tileHeight = gLevelDataNew['tileHeight']
+        self.mapx = gPlayerDataNew['mapX']
+        self.mapy = gPlayerDataNew['mapY']
+        self.width = gLevelDataNew['width']
+        self.height = gLevelDataNew['height']
+    elseif param == 'savedData' then
+        self.tileWidth = gLevelData['tileWidth']
+        self.tileHeight = gLevelData['tileHeight']
+        self.mapx = gPlayerData['mapX']
+        self.mapy = gPlayerData['mapY']
+        self.width = gLevelData['width']
+        self.height = gLevelData['height']
+    end
 
     self.baseLayer = TileMap(self.tileWidth, self.tileHeight)
     self.grassLayer = TileMap(self.tileWidth, self.tileHeight)
@@ -20,8 +33,8 @@ function Level:init()
 
     self.player = Player {
         animations = ENTITY_DEFS['player'].animations,
-        mapX = 10,
-        mapY = 10,
+        mapX = self.mapx,
+        mapY = self.mapy,
         width = 16,
         height = 16,
     }

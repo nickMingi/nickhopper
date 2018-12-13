@@ -41,24 +41,9 @@ function StartState:update(dt)
     end
 
     if love.keyboard.wasPressed('enter') or love.keyboard.wasPressed('return') then
-        gStateStack:push(FadeInState({
-            r = 255, g = 255, b = 255
-        }, 1,
-        function()
-            gSounds['intro-music']:stop()
-            self.tween:remove()
-
-            gStateStack:pop()
-
-            gStateStack:push(PlayState())
-            gStateStack:push(DialogueState("" ..
-                "Welcome to the world of Mingi-Pokemon"
-            ))
-            gStateStack:push(FadeOutState({
-                r = 255, g = 255, b = 255
-            }, 1,
-            function() end))
-        end))
+        gSounds['intro-music']:stop()
+        self.tween:remove()
+        gStateStack:push(StartMenuState())
     end
 end
 

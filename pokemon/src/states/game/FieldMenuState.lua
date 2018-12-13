@@ -8,8 +8,8 @@
 
 FieldMenuState = Class{__includes = BaseState}
 
-function FieldMenuState:init(player)
-    self.player = player
+function FieldMenuState:init(level)
+    self.player = level.player
     self.fieldMenu = Menu{
         x = VIRTUAL_WIDTH -248,
         y = VIRTUAL_HEIGHT - 64,
@@ -28,6 +28,13 @@ function FieldMenuState:init(player)
                 onSelect = function()
                     gStateStack:pop()
                     gStateStack:push(MenuState("Bag",self.player))
+                end
+            },
+            {
+                text = 'Save',
+                onSelect = function()
+                    gStateStack:pop()
+                    gStateStack:push(SaveGameState(level))
                 end
             }
         }

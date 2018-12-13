@@ -7,6 +7,9 @@ Event = require 'lib/knife.event'
 push = require 'lib/push'
 Timer = require 'lib/knife.timer'
 
+require 'db/database'
+require 'db/savedData'
+
 require 'src/Animation'
 require 'src/constants'
 require 'src/Party'
@@ -51,6 +54,8 @@ require 'src/states/game/StartState'
 require 'src/states/game/TakeTurnState'
 require 'src/states/game/FieldMenuState'
 require 'src/states/game/MenuState'
+require 'src/states/game/StartMenuState'
+require 'src/states/game/SaveGameState'
 
 require 'src/world/Level'
 require 'src/world/tile_ids'
@@ -178,4 +183,8 @@ gSounds = {
     ['levelup'] = love.audio.newSource('sounds/levelup.wav',"static"),
     ['victory-music'] = love.audio.newSource('sounds/victory.wav',"static"),
     ['intro-music'] = love.audio.newSource('sounds/intro.mp3',"static")
+}
+
+gFilenames = {
+    ['saved-game'] = "/Users/nickhopper/PortFolio/pokemon/db/savedData.lua"
 }

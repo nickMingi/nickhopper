@@ -12,9 +12,12 @@
 
 PlayState = Class{__includes = BaseState}
 
-function PlayState:init()
-    self.level = Level()
-
+function PlayState:init(data)
+    if data == 'new' then
+        self.level = Level('database')
+    elseif data == 'load' then
+        self.level = Level('savedData')
+    end
     gSounds['field-music']:setLooping(true)
     gSounds['field-music']:play()
 
@@ -25,7 +28,7 @@ function PlayState:update(dt)
     if  love.keyboard.wasPressed('b') then
         gSounds['blip']:play()
         -- show a menu for field
-        gStateStack:push(FieldMenuState(self.level.player))
+        gStateStack:push(FieldMenuState(self.level))
     end
 
     if not self.dialogueOpened and love.keyboard.wasPressed('p') then

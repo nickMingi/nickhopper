@@ -22,7 +22,8 @@ function Entity:init(def)
 
     self.width = def.width
     self.height = def.height
-
+    print(self.mapX)
+    print(self.mapY)
     self.x = (self.mapX - 1) * TILE_SIZE
 
     -- halfway raised on the tile just to simulate height/perspective
