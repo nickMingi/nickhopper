@@ -20,6 +20,10 @@ Readme
 ## Pokemon
 > Game practices. Implementing it based on Harvard.edu's source
 >
+## UI
+> User Interface & User Experience
+> Especially Equipment application UI(My experience)
+>
 ## Hurdle Algorithm
 > Developing Algorithm
 >
