@@ -1,0 +1,45 @@
++0000000000 //0 const 
++0000000001 //1 const
++0000000000 //2 Value2    						  
++0000000000 //3 Index    -> 300(Address of Array) 
++0000000000 //4 N        Absolute Address         
++0000000000 //5 Value    Absolute Address 		  
++0000000000 //6 TEMP 	 To judge need more loop or not				  
+
++9999999999 // 300 = A[1,3,5,4,2,9,8,6,7,10]
++8000000004 //Read N  						 0
++8000000005 //Read Value  					 1
+-6005300003 //Value -> A[Index] 			 2
++7003004001 //Index++,if Index < N Goto 1  	 3   
++0000000003 //0 -> Index Initialize			 4      i = 0 // A[i] = 1
++0000000005 //0 -> Value Initialize			 5		value = 0
++0000000006 //0 -> TEMP Initialize			 6      TEMP = 0
++6300003005 //A[Index] -> Value				 7      value = A[i]
++1003001003 // Increase i       			 8   	i++ 
++5003004017 // If(i>=N) goto 17				 9    
++6300003002 // Put A[i++] to value2		     10 
++5002005007 // If(value2>value) goto 7		 11    Compare (value > value2)
+-6005300003 // Value -> A[Index++]			 12    Swap
+-1003001003 // Decrease i value				 13    i--
+-6002300003 // Put value2 to A[index]        14
++1006001006 // Increase TEMP 				 15
++7003004007 // Index++,if Index < N Goto 7   16
++5006001004 // If(TEMP>=1) goto 4			 17
++0000000003 // 0 -> Index Initialize         18 
++6300003005 // A[Index] -> Value			 19
+-8005000000 // Print Value	    			 20   
++7003004019 // Index++,if Index < N Goto 19  21
++9000000000 // STOP							 22   
+
++9999999999
++0000000010
++0000000001
++0000000005
++0000000003
++0000000004
++0000000002
++0000000009
++0000000008
++0000000006
++0000000007
++0000000010

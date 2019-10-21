@@ -22,7 +22,7 @@ function Selection:update(dt)
             self.currentSelection = self.currentSelection - 1
         end
 
-        gSounds['blip']:stop()
+        gSounds['blip']:()
         gSounds['blip']:play()
 
     elseif love.keyboard.wasPressed('down') then

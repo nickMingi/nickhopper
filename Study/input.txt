@@ -1,0 +1,18 @@
+2
+
+1000
+3
+Shoyu 800
+Miso 850
+Tonkotsu 900
+2
+Egg 100
+Sprout 150
+
+1000
+2
+Shoyu 850
+Miso 900
+2
+Rice 200
+Chickens 250

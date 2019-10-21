@@ -18,8 +18,14 @@ UI
 ## Contents
 ### * Analyzing Current UIs
 >
+> Let's talk about Standard Equipment Application
 >
+![Standard](https://postfiles.pstatic.net/MjAxODEyMTRfMTMy/MDAxNTQ0NzcyODk1OTY0.TthHtcQaqXbNPBoq6lTrFImLOeKTBK1ti7jtSPpjvuQg.Wtcz8zqQMtf7KLYdP8M6Cd1fzYgO8veBxjgBnn63jYYg.PNG.cjsvndtjs1/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2018-12-14_%EC%98%A4%ED%9B%84_4.33.26.png?type=w966 "desc")
 >
+> Most of equipment programs are designed like above
+>
+> It is intuitive and easy 
+
 
 ### * New UI Concepts
 
