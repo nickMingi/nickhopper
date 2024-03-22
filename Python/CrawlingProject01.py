@@ -19,7 +19,7 @@ def getBookInfo(book_tag):
 ## 전역 변수 부분 ##
 url = \
     "https://www.yes24.com/Product/Category/BestSeller?categoryNumber=001001003&pageNumber="
-folderName = "./"
+folderName = "./data/"
 wsName = "IT 서적 순위"
 header = ['순위','책이름','저자','출판사','출판일','가격']
 
